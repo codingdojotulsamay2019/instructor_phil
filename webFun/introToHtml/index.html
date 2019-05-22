@@ -5,14 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+        }
+        #box2 {
+            width: 100px;
+            height: 300px;
+            background-color: red;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .container{
+            background-color: aqua;
+            height: 400px;
+            width: 400px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <h6>Hello World</h6>
-    <ul>
-        <li>list 1</li>
-        <li>list 2</li>
-        <li>list 3</li>
-    </ul>
+    <div class="container">
+        <div id="box1"></div>
+        <div id="box2"></div>
+    </div>
 </body>
 </html>
