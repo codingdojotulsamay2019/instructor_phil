@@ -1,0 +1,48 @@
+Python Day 6 – Flask + MySQL
+1. What is SQL?
+2. Based on the data given, draw the
+associated ERD diagram:
+3. Using the data to the left, write queries to:
+-get all the artists
+-get all the works, ordered by their creation year
+-get all the artists who were born during the 19th century (January 1, 1801 – December 31, 1900)
+-get all the works that start with “The”
+-add the artist Leonardo da Vinci (April 15, 1452 – May 2, 1519) (or your own favorite artist)
+-add Mona Lisa (1503), which was painted by da Vinci
+-update the title Autumn Rhythm to Autumn Rhythm (Number 30)
+-remove Jackson Pollock from the database
+-list all the works of art, with their associated artist
+
+
+4. What does the PyMySQL package do for us?
+
+
+5. Assuming I have the correct files and database (schema name is ‘art’) set up, complete the file
+below:
+
+from flask import Flask, render_template
+from mysqlconnection import connectToMySQL
+
+app = Flask(__name__)
+@app.route(“/”)
+def index():
+    # this route should show all the artists
+    db = connectToMySQL(‘art’) # make a connection to the db
+    all_artists = "SELECT * FROM artists;"
+    return render_template(“index.html”, artists=all_artists)
+
+@app.route(“/artists/<id>”)
+def show_artist(id):
+    # this route should display the single artist’s information
+    query = "SELECT * FROM artists WHERE id = %(id)s;"
+    data = {"id":id}
+    db = connectToMySQL(‘art’) # make a connection to the db
+    one_artist = db.query_db(query, data)
+    # BONUS: also display all the artist’s works of art
+    # query = "SELECT * FROM artist JOIN works_of_art ON artist.id = works_of_art.artist_id;"
+    # db = connectToMySQL(‘art’) # make a connection to the db
+    # artists_with_art = db.query_db(query)
+    return render_template(“artist.html”, artist = one_artist)
+
+if __name__ == “__main__”:
+    app.run(debug=True)
