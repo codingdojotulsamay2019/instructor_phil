@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pets</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/bootstrap.css') }} ">
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="border-bottom border-dark mb-2">All the Pets</h2>
+                <table class="table table-striped text-left col-8 offset-2">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row border-bottom border-dark mb-2">
+                    <div class="col-12 text-center">
+                        <h2>Add new pet</h2>
+                    </div>
+                </div>
+                <form action="/pets" method="post" class="col-4 offset-4">
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="type" class="col-sm-2 col-form-label">Type:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="type" name="type">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10 offset-2">
+                            <button type="submit" class="btn btn-primary">Add Pet</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
