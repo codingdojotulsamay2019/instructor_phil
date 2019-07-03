@@ -1,0 +1,11 @@
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/bin/Debug/netcoreapp2.1/DeckOfCards.deps.json
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/bin/Debug/netcoreapp2.1/DeckOfCards.runtimeconfig.json
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/bin/Debug/netcoreapp2.1/DeckOfCards.runtimeconfig.dev.json
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/bin/Debug/netcoreapp2.1/DeckOfCards.dll
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/bin/Debug/netcoreapp2.1/DeckOfCards.pdb
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/obj/Debug/netcoreapp2.1/DeckOfCards.csprojAssemblyReference.cache
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/obj/Debug/netcoreapp2.1/DeckOfCards.csproj.CoreCompileInputs.cache
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/obj/Debug/netcoreapp2.1/DeckOfCards.AssemblyInfoInputs.cache
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/obj/Debug/netcoreapp2.1/DeckOfCards.AssemblyInfo.cs
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/obj/Debug/netcoreapp2.1/DeckOfCards.dll
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/DeckOfCards/obj/Debug/netcoreapp2.1/DeckOfCards.pdb
