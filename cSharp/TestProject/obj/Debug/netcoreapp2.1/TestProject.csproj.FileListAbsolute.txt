@@ -1,0 +1,11 @@
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/bin/Debug/netcoreapp2.1/TestProject.deps.json
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/bin/Debug/netcoreapp2.1/TestProject.runtimeconfig.json
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/bin/Debug/netcoreapp2.1/TestProject.runtimeconfig.dev.json
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/bin/Debug/netcoreapp2.1/TestProject.dll
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/bin/Debug/netcoreapp2.1/TestProject.pdb
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/obj/Debug/netcoreapp2.1/TestProject.csprojAssemblyReference.cache
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/obj/Debug/netcoreapp2.1/TestProject.csproj.CoreCompileInputs.cache
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/obj/Debug/netcoreapp2.1/TestProject.AssemblyInfoInputs.cache
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/obj/Debug/netcoreapp2.1/TestProject.AssemblyInfo.cs
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/obj/Debug/netcoreapp2.1/TestProject.dll
+/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/TestProject/obj/Debug/netcoreapp2.1/TestProject.pdb
