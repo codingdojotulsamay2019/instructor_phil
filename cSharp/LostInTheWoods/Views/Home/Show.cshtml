@@ -1,0 +1,56 @@
+@model Trail
+
+@{
+    var t = Model;
+}
+
+<div class="row">
+    <div class="col-sm-offset-10">
+        <a class="btn btn-warning" href="/">Go Home</a>
+    </div>
+</div>
+<div class="row text-white">
+    <h2>@t.Name</h2>
+</div>
+<div class="container text-white">
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>Description:</h2>
+        </div>
+        <div class="col-sm-8">
+            <p>@t.Description</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>Trail Length:</h2>
+        </div>
+        <div class="col-sm-8">
+            <p>@t.Length</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>Elevation Change:</h2>
+        </div>
+        <div class="col-sm-8">
+            <p>@t.Elevation</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>Longitude:</h2>
+        </div>
+        <div class="col-sm-8">
+            <p>@t.Longitude&#176;N</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>Latitude:</h2>
+        </div>
+        <div class="col-sm-8">
+            <p>@t.Latitude&#176;W</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model List<Trail>
+
+<div class="row">
+    <h2 class="text-white d-inline align-bottom">Lost in the Woods</h2>
+    <h6 class="text-white d-inline align-bottom">List of local hiking trails</h6>
+</div>
+<div class="row">
+    <table class="table text-white">
+        <thead>
+            <tr>
+                <th scope="col">Trail Name</th>
+                <th scope="col">Trail Length</th>
+                <th scope="col">Elevation Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{foreach(var trail in Model)
+                {
+                    <tr>
+                        <td><a href="/trail/@trail.TrailId">@trail.Name</a></td>
+                        <td>@trail.Length</td>
+                        <td>@trail.Elevation</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <a class="btn btn-warning" href="/trail/new" role="button">Add a new Trail</a>
+</div>
+    
+    
