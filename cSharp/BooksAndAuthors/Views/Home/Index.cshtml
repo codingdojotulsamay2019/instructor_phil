@@ -1,0 +1,39 @@
+﻿@model IndexView
+
+
+<div class="container">
+    <div class="row">
+        <h1>All Authors</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{foreach(var a in Model.AllAuthors)
+                    {
+                    <tr>
+                        <td>@a.AuthorId</td>
+                        <td>@a.Name</td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <h1>Add Authors</h1>
+        <form action="/authors" method="post">
+            <div class="form-group">
+                <label for="" asp-for="NewAuthor.Name"></label>
+                <input class="form-control" asp-for="NewAuthor.Name">
+                <span class="text-danger" asp-validation-for="NewAuthor.Name"></span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Add Author</button>
+            </div>
+        </form>
+    </div>
+</div>
