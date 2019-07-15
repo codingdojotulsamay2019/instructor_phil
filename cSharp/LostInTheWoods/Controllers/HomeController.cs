@@ -27,16 +27,6 @@ namespace LostInTheWoods.Controllers
             return View(AllTrails);
         }
 
-        // 
-        [HttpGet("number")]
-        public IActionResult Num()
-        {
-            int[] num_arr = {1,2,3,4,5,6,7,8,9};
-            string[] str_arr = {"aaa","aaa","aaa","aaa","aaa"};
-            var test = new {num = num_arr, str = str_arr};
-            return View(test);
-        }
-
         [Route("trail/new")]
         [HttpGet]
         public IActionResult New()

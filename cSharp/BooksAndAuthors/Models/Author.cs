@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BooksAndAuthors
@@ -13,11 +14,14 @@ namespace BooksAndAuthors
         [Display(Name="Name:")]
         public string Name { get; set; }
 
+        public List<Book> Books { get; set; }
+
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
         public Author()
         {
+            Books = new List<Book>();
             CreatedAt = DateTime.Now;
             UpdatedAt = DateTime.Now;
         }

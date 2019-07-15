@@ -26,4 +26,3 @@
 /Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/LostInTheWoods/obj/Debug/netcoreapp2.1/LostInTheWoods.csproj.CopyComplete
 /Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/LostInTheWoods/obj/Debug/netcoreapp2.1/Razor/Views/Home/New.g.cshtml.cs
 /Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/LostInTheWoods/obj/Debug/netcoreapp2.1/Razor/Views/Home/Show.g.cshtml.cs
-/Users/pkrull/Documents/codingDojo/cohorts/tulsa_may_2019/cSharp/LostInTheWoods/obj/Debug/netcoreapp2.1/Razor/Views/Home/Num.g.cshtml.cs

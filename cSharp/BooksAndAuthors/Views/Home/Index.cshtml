@@ -1,39 +1,111 @@
 ﻿@model IndexView
 
-
-<div class="container">
-    <div class="row">
-        <h1>All Authors</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                @{foreach(var a in Model.AllAuthors)
+<div class="row">
+    <div class="col">
+        <div class="container">
+            <!-- <div class="row"> -->
+                <h1>All Authors</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Wrote</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{if(Model.AllAuthors != null)
                     {
-                    <tr>
-                        <td>@a.AuthorId</td>
-                        <td>@a.Name</td>
-                    </tr>
-                }
-            }
-            </tbody>
-        </table>
+
+                        foreach(var a in Model.AllAuthors)
+                            {
+                                <tr>
+                                    <td>@a.AuthorId</td>
+                                    <td>@a.Name</td>
+                                    <td>
+                                        <ul>
+                                            @foreach(var b in a.Books)
+                                                {
+                                                    <li>@b.Title</li>
+                                                }
+                                        </ul>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    }
+                    </tbody>
+                </table>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                    <h1>Add Authors</h1>
+                    <form action="/authors" method="post">
+                        <div class="form-group">
+                        <label for="" asp-for="NewAuthor.Name"></label>
+                        <input class="form-control" asp-for="NewAuthor.Name">
+                        <span class="text-danger" asp-validation-for="NewAuthor.Name"></span>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Add Author</button>
+                    </div>
+                </form>
+            <!-- </div> -->
+        </div>
     </div>
-    <div class="row">
-        <h1>Add Authors</h1>
-        <form action="/authors" method="post">
-            <div class="form-group">
-                <label for="" asp-for="NewAuthor.Name"></label>
-                <input class="form-control" asp-for="NewAuthor.Name">
-                <span class="text-danger" asp-validation-for="NewAuthor.Name"></span>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary">Add Author</button>
-            </div>
-        </form>
+    <div class="col">
+        <div class="container">
+            <!-- <div class="row"> -->
+                <h1>All Books</h1>
+                <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Title</th>
+                                <th>Written by</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{foreach(var a in Model.AllBooks)
+                                {
+                                    <tr>
+                                        <td>@a.BookId</td>
+                                        <td>@a.Title</td>
+                                        <td>@a.Author.Name</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+            <!-- </div>
+            <div class="row"> -->
+                <h1>Add Books</h1>
+                @{if(Model.AllAuthors != null)
+                    {
+
+                        <form action="/books" method="post">
+                            <div class="form-group">
+                                <label for="" asp-for="NewBook.Title"></label>
+                                <input class="form-control" asp-for="NewBook.Title">
+                                <span class="text-danger" asp-validation-for="NewBook.Title"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="" asp-for="NewBook.AuthorId"></label>
+                                <select asp-for="NewBook.AuthorId">
+                                    <option selected disabled>Choose an Author</option>
+                                    @foreach(var a in Model.AllAuthors)
+                                        {
+                                            <option value="@a.AuthorId">@a.Name</option>
+                                        }
+                                </select>
+                                <span class="text-danger" asp-validation-for="NewBook.AuthorId"></span>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary">Add Book</button>
+                            </div>
+                        </form>
+                    }
+                }
+            <!-- </div> -->
+        </div>
     </div>
 </div>
