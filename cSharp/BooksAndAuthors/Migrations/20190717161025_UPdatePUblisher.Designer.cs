@@ -3,14 +3,16 @@ using System;
 using BooksAndAuthors.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BooksAndAuthors.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20190717161025_UPdatePUblisher")]
+    partial class UPdatePUblisher
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,24 +57,6 @@ namespace BooksAndAuthors.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("BooksAndAuthors.Models.Publication", b =>
-                {
-                    b.Property<int>("PublicationId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("BookId");
-
-                    b.Property<int>("PublisherId");
-
-                    b.HasKey("PublicationId");
-
-                    b.HasIndex("BookId");
-
-                    b.HasIndex("PublisherId");
-
-                    b.ToTable("Publications");
-                });
-
             modelBuilder.Entity("BooksAndAuthors.Models.Publisher", b =>
                 {
                     b.Property<int>("PublisherId")
@@ -95,19 +79,6 @@ namespace BooksAndAuthors.Migrations
                     b.HasOne("BooksAndAuthors.Models.Author", "Author")
                         .WithMany("Books")
                         .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("BooksAndAuthors.Models.Publication", b =>
-                {
-                    b.HasOne("BooksAndAuthors.Models.Book", "Book")
-                        .WithMany("PublishedBy")
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("BooksAndAuthors.Models.Publisher", "Publisher")
-                        .WithMany("BooksPublished")
-                        .HasForeignKey("PublisherId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
