@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="row">
+        <div class="col-4 offset-1">
+            <div class="container">
+                <h1>Add Author</h1>
+                <form action="/author" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-4 offset-1">
+            <div class="container">
+                <h1>All Authors</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Object ID</th>
+                            <th>Name</th>
+                            <th>Created</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Mark</td>
+                            <td>October 12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

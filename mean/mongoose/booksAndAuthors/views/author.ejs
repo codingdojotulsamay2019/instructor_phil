@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/bootstrap.css">
+</head>
+<body>
+    <% if (err)  {%>
+        <p><%= err %></p>
+    <% } %>
+    <div class="row">
+        <div class="col-4 offset-1">
+            <div class="container">
+                <h1>Add Author</h1>
+                <form action="/author" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+                        <% if(messages.name) { %>
+                            <% for (var x of messages.name) { %>
+                              <p class="text-danger"><%= x %></p>
+                            <% } %>
+                        <% } %>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-4 offset-1">
+            <div class="container">
+                <h1>All Authors</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Object ID</th>
+                            <th>Name</th>
+                            <th>Created</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let a in authors) { %> 
+                            <tr>
+                                <th><%= authors[a]._id %></th>
+                                <td><%= authors[a].name %></td>
+                                <td><%= authors[a].createdAt.toDateString()  %></td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
