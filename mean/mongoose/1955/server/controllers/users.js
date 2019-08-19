@@ -10,8 +10,8 @@ module.exports = {
   },
   create: (req, res) => {
     User.create(req.body)
-    .then(user => res.json(user))
-    .catch(err => res.json(err))
+    .then(user => res.json({status: true, user: user}))
+    .catch(err => res.json({status: false, error: err}))
   },
   show: (req, res) => {
     const { name } = req.params;

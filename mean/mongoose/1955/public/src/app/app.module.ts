@@ -4,14 +4,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HttpService } from './http.service';
+import { UsersIndexComponent } from './users-index/users-index.component';
+import { UsersCreateComponent } from './users-create/users-create.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UsersIndexComponent,
+    UsersCreateComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

@@ -12,7 +12,11 @@ export class HttpService {
 
   getUsers():Observable<object> {
     // get all user from express, express returns an observable
-    return this._http.get('/users')
+    return this._http.get('/users');
+  }
+
+  addUserMethodInService(userName: string):Observable<object> {
+    return this._http.post('/users', {name: userName});
   }
 
 }
