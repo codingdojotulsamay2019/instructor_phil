@@ -1,0 +1,30 @@
+<form (submit)="addBook()">
+  <label for="">Title</label>
+  <br>
+  <input type="text" name="title" [(ngModel)]="book.title">
+  <span *ngIf="title" style="color: red;">{{ title }}</span>
+  <br>
+  <label for="">Name</label>
+  <input type="text" name="name" [(ngModel)]="review.name">
+  <span *ngIf="name" style="color: red;">{{ name }}</span>
+  <br>
+  <label for="">Content</label>
+  <input type="text" name="content" [(ngModel)]="review.content">
+  <span *ngIf="content" style="color: red;">{{ content }}</span>
+  <br>
+  <label for="">Rating</label>
+  <select name="rating" [(ngModel)]="review.rating" id="">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <span *ngIf="rating" style="color: red;">{{ rating }}</span>
+  <button>Add Book</button>
+</form>
+<br>
+<a [routerLink]="['/books']">Home</a>
+
+<p>{{  book | json }}</p>
+<p>{{ review | json }} </p>

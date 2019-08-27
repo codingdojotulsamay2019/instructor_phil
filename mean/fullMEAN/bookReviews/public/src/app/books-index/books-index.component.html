@@ -1,0 +1,15 @@
+<p>
+  books-index works!
+</p>
+<a [routerLink]="['/books', 'new']">Add New book</a>
+
+<table>
+  <tr>
+    <th>title</th>
+    <th>action</th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>{{ book.title }}</td>
+    <td><a [routerLink]="['/books', book._id]">Show</a></td>
+  </tr>
+</table>
