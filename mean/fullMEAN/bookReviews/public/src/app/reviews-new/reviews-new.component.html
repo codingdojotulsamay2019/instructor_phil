@@ -1,3 +1,19 @@
-<p>
-  reviews-new works!
-</p>
+<!-- <form (submit)="addReview()"> -->
+    <label for="">Name</label>
+    <input type="text" name="name" [(ngModel)]="review.name">
+    <br>
+    <label for="">Content</label>
+    <input type="text" name="content" [(ngModel)]="review.content">
+    <br>
+    <label for="">Rating</label>
+    <select name="rating" [(ngModel)]="review.rating" id="">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <br>
+    <p *ngFor="let e of reviewErrors" style="color: red;">{{ e }}</p>
+    <button (click)="addReview()">Add Review</button>
+<!-- </form> -->

@@ -7,9 +7,11 @@
   <tr>
     <th>title</th>
     <th>action</th>
+    <th>average rating</th>
   </tr>
   <tr *ngFor="let book of books">
     <td>{{ book.title }}</td>
     <td><a [routerLink]="['/books', book._id]">Show</a></td>
+    <td>{{ book.average }}</td>
   </tr>
 </table>

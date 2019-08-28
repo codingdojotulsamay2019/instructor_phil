@@ -3,3 +3,28 @@
 </p>
 <a [routerLink]="['/books', 'new']">Add New book</a>
 <a [routerLink]="['/books']">Home</a>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{{ book | json }}
+<div *ngIf="book">
+  <h1>{{ book.title }}</h1>
+  <h4>Reviews:</h4>
+  <ul>
+    <li *ngFor="let review of book.reviews">{{ review.content }} written by {{ review.name }} with a rating of {{ review.rating }}</li>
+  </ul>
+  
+  <br>
+  <br>
+  <br>
+  <hr>
+  <app-reviews-new [oneBook]="book"></app-reviews-new>
+</div>
